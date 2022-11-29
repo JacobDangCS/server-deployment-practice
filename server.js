@@ -16,24 +16,19 @@ const app = express();
 
 app.use(cors());
 
-const {app}  =  require('../server.js');
-const supertest = require('supertest');
-const request = supertest(app);
-
-
 const PORT = process.env.PORT || 3002;
 
-app.use(logger);
-
-app.get('/bad', (req, res, next) => {
-    next('Error!');
-});
+//app.use(logger);
 
 
 app.get('/', (req, res, next) => {
     res.status(200).send('Hello World!');
-    res.send('request received');
 })
+
+
+app.get('/bad', (req, res, next) => {
+    next('Error!');
+});
 
 app.use('/*', notFound)
 

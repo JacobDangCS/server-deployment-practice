@@ -1,5 +1,6 @@
-'use strict'
-modules.export = (req, res, next) => {
+'use strict';
+
+module.export = (req, res, next) => {
     res.status(500).send({
         error: 500,
         route: req.path,

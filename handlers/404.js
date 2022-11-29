@@ -1,5 +1,6 @@
-'use strict'
-modules.export = (req, res, next) => {
+'use strict';
+
+module.export = (req, res, next) => {
     res.status(404).send({
         error: 404,
         route: req.path,
@@ -7,4 +8,3 @@ modules.export = (req, res, next) => {
     });
 
 }
-
