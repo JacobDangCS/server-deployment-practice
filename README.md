@@ -31,4 +31,4 @@ see '.env.sample'
     - handles errors
 
 ## UML
-![UML](./lab1-image.png)
+![UML](./assets/lab1-image.png)
