@@ -9,8 +9,8 @@ Building a web service with CI & CD to learn the basics of back-end Javascript a
 
 ### Links & Resources
 {GitHub Actions} {URL}
-[prod deployment] {URL}
-[dev deployment]  {URL}
+[prod deployment] {https://lab1-server-deployment-prod.onrender.com/}
+[dev deployment]  {https://lab1-server-deployment-dev.onrender.com/}
 
 see '.env.sample'
 
