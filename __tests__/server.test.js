@@ -17,7 +17,8 @@ describe('APIServer', () => {
     });
 
     it('handles errors', async () => {
-        const response = await req.get('/bad')
+        const response = await request.get('/bad')
+        console.log('---', response.body);
         expect(response.status).toEqual(500);
         expect(response.body.route).toEqual('/bad');
     });

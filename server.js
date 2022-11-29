@@ -10,7 +10,7 @@ const logger = require('./middleware/logger');
 
 const notFound = require('./handlers/404');
 
-const errorHandler = require('./handlers/500')
+const errorHandler = require('./handlers/500');
 
 const app = express();
 
@@ -30,7 +30,7 @@ app.get('/bad', (req, res, next) => {
     next('Error!');
 });
 
-app.use('/*', notFound)
+app.use('/*', notFound);
 
 app.use(errorHandler);
 
