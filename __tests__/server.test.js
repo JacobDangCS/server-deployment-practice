@@ -22,4 +22,17 @@ describe('APIServer', () => {
         expect(response.status).toEqual(500);
         expect(response.body.route).toEqual('/bad');
     });
+
+    //Change the bottom two /helloQuery & /helloPath to /person
+
+    it('works with query params and the "/helloQuery" route', async () => {
+        const response = await request.get('/helloQuery?name=Jacob');
+        expect(response.text).toEqual('Hello Jacob');
+    });
+
+    it('works with path params and the "/helloPath" route', async () => {
+        const response = await request.get('/helloPath/Lucky');
+        expect(response.text).toEqual('Hello Lucky');
+    });
+
 });

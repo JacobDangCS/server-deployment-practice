@@ -25,6 +25,14 @@ app.get('/', (req, res, next) => {
     res.status(200).send('Hello World!');
 })
 
+app.get('/helloQuery', (req, res, next) => {
+    res.status(200).send(`Hello ${req.query.name}`);
+});
+
+app.get('helloPath', (req, res, next) => {
+    res.status(200).send(`Hello ${req.pararms.individual}`);
+});
+
 
 app.get('/bad', (req, res, next) => {
     next('Error!');

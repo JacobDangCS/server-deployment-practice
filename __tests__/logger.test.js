@@ -27,4 +27,10 @@ describe('Logger middleware', () => {
         logger(req, res, next);
         expect(consoleSpy).toHaveBeenCalledWith('logged at', req.timestamp);
     });
+
+    it('calls next as expected', () => {
+        logger(req, res, next);
+        expect(next).toHaveBeenCalledWith();
+        expect(next).not.toHaveBeenCalledWith('this should fail');
+    });
 })
